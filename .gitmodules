@@ -1,0 +1,3 @@
+[submodule "client/flux-client"]
+	path = client/flux-client
+	url = https://github.com/EclipseLunaria/manga-reader-client.git
