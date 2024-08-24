@@ -15,7 +15,7 @@ module.exports = {
       env_production: {
         NODE_ENV: "production",
       },
-      env_development: {
+      env: {
         NODE_ENV: "development",
       },
     },
@@ -30,7 +30,7 @@ module.exports = {
       env_production: {
         NODE_ENV: "production",
       },
-      env_development: {
+      env: {
         NODE_ENV: "development",
       },
     },
@@ -43,9 +43,19 @@ module.exports = {
       ignore_watch: ["node_modules"],
       env_production: {
         NODE_ENV: "production",
+        DB_HOST: process.env.CONTENT_DB_HOST,
+        DB_PORT: process.env.CONTENT_DB_PORT,
+        DB_USER: process.env.CONTENT_DB_USER,
+        DB_PASS: process.env.CONTENT_DB_PASS,
+        DB_NAME: process.env.CONTENT_DB_NAME,
       },
-      env_development: {
+      env: {
         NODE_ENV: "development",
+        DB_HOST: process.env.CONTENT_DB_HOST,
+        DB_PORT: process.env.CONTENT_DB_PORT,
+        DB_USER: process.env.CONTENT_DB_USER,
+        DB_PASS: process.env.CONTENT_DB_PASS,
+        DB_NAME: process.env.CONTENT_DB_NAME,
       },
     },
     {
@@ -58,23 +68,13 @@ module.exports = {
       ignore_watch: ["node_modules"], // Ignore changes in node_modules
       env_production: {
         NODE_ENV: "production",
-        DB_HOST: process.env.DB_HOST,
-        DB_PORT: process.env.DB_PORT,
-        DB_USER: process.env.DB_USER,
-        DB_PASS: process.env.DB_USER,
-        DB_NAME: process.env.DB_NAME,
       },
-      env_development: {
+      env: {
         NODE_ENV: "development",
-        DB_HOST: process.env.DB_HOST,
-        DB_PORT: process.env.DB_PORT,
-        DB_USER: process.env.DB_USER,
-        DB_PASS: process.env.DB_USER,
-        DB_NAME: process.env.DB_NAME,
       },
     },
     {
-      name: "authenticator",
+      name: "authentication",
       script: "node_modules/.bin/ts-node",
       args: "./src/server.ts",
       cwd: "./services/authentication",
@@ -82,9 +82,19 @@ module.exports = {
       ignore_watch: ["node_modules"],
       env_production: {
         NODE_ENV: "production",
+        DB_HOST: process.env.AUTH_DB_HOST,
+        DB_PORT: process.env.AUTH_DB_PORT,
+        DB_USER: process.env.AUTH_DB_USER,
+        DB_PASS: process.env.AUTH_DB_PASS,
+        DB_NAME: process.env.AUTH_DB_NAME,
       },
-      env_development: {
+      env: {
         NODE_ENV: "development",
+        DB_HOST: process.env.AUTH_DB_HOST,
+        DB_PORT: process.env.AUTH_DB_PORT,
+        DB_USER: process.env.AUTH_DB_USER,
+        DB_PASS: process.env.AUTH_DB_PASS,
+        DB_NAME: process.env.AUTH_DB_NAME,
       },
     },
   ],
