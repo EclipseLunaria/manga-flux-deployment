@@ -18,6 +18,26 @@ const MODULES: Service[] = [
     name: "Manga Flux Client",
     serviceDir: "flux-client",
   },
+  {
+    name: "API Gateway",
+    serviceDir: "services/api-gateway",
+  },
+  {
+    name: "Series Info Service",
+    serviceDir: "services/series-info",
+  },
+  {
+    name: "Database Service",
+    serviceDir: "services/database",
+  },
+  {
+    name: "Distribution Service",
+    serviceDir: "services/distribution",
+  },
+  {
+    name: "Authentication Service",
+    serviceDir: "services/authentication",
+  },
 ];
 
 const installDeps = () => {

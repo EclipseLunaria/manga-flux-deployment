@@ -1,3 +1,18 @@
 [submodule "client/flux-client"]
 	path = client/flux-client
 	url = https://github.com/EclipseLunaria/manga-reader-client.git
+[submodule "services/api-gateway"]
+	path = services/api-gateway
+	url = https://github.com/EclipseLunaria/api-gateway.git
+[submodule "services/series-info"]
+	path = services/series-info
+	url = https://github.com/EclipseLunaria/series-info-service
+[submodule "services/database"]
+	path = services/database
+	url = https://github.com/EclipseLunaria/database-service.git
+[submodule "services/distribution"]
+	path = services/distribution
+	url = https://github.com/EclipseLunaria/distribution-service.git
+[submodule "services/authentication"]
+	path = services/authentication
+	url = https://github.com/EclipseLunaria/authentication-service.git
