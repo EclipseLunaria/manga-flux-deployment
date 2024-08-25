@@ -1,29 +1,25 @@
 # Manga Flux Deployment
 
-## Installation
+## Setup
 
-Install postgresql if not already installed
+### Installation
 
-**Ubuntu**:
-
-```sh
-sudo apt install postgresql
-```
-
-**Initialize git submodules.**
+#### Install Microservice Dependencies
 
 ```sh
-git submodule init --recursive
-git submodule update --recursive
+# Pulls latest version of the microservices
+git submodule init
+git submodule update
+# install packages from main directory and services
+npm install
+npm run install deps
 ```
 
-Install project dependencies.
+### **Initialize Databases**
 
-```sh
-npm run install-deps
-```
+#### [Install Postgres](https://www.w3schools.com/postgresql/postgresql_install.php)
 
-### **Create Databases**
+
 
 **Create Database Tables**
 
