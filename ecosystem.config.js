@@ -14,9 +14,11 @@ module.exports = {
       ignore_watch: ["node_modules"], // Ignore changes in node_modules
       env_production: {
         NODE_ENV: "production",
+        ACCESS_TOKEN_SECRET: process.env.JWT_SECRET,
       },
       env: {
         NODE_ENV: "development",
+        ACCESS_TOKEN_SECRET: process.env.JWT_SECRET,
       },
     },
     {
@@ -87,6 +89,9 @@ module.exports = {
         DB_USER: process.env.AUTH_DB_USER,
         DB_PASS: process.env.AUTH_DB_PASS,
         DB_NAME: process.env.AUTH_DB_NAME,
+        ACCESS_TOKEN_SECRET: process.env.JWT_SECRET,
+        CLIENT_BASE_URL: "https://mangaflux.net",
+        REDIRECT_URI: "http://localhost:5000/auth/mal/callback",
       },
       env: {
         NODE_ENV: "development",
@@ -95,6 +100,9 @@ module.exports = {
         DB_USER: process.env.AUTH_DB_USER,
         DB_PASS: process.env.AUTH_DB_PASS,
         DB_NAME: process.env.AUTH_DB_NAME,
+        ACCESS_TOKEN_SECRET: process.env.JWT_SECRET,
+        CLIENT_BASE_URL: "http://localhost:6969",
+        REDIRECT_URI: "http://localhost:5000/auth/mal/callback",
       },
     },
   ],

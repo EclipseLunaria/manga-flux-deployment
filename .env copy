@@ -1,0 +1,19 @@
+CONTENT_DB_HOST=localhost
+CONTENT_DB_PORT=5432
+CONTENT_DB_USER=manga_reader
+CONTENT_DB_PASS=password
+CONTENT_DB_NAME=manga_reader
+
+# auth vars
+
+AUTH_DB_HOST=localhost
+AUTH_DB_PORT=5432
+AUTH_DB_USER=manga_reader_authe
+AUTH_DB_PASS=password
+AUTH_DB_NAME=manga_reader_auth
+JWT_SECRET=
+MAL_CLIENT_ID=
+MAL_CLIENT_SECRET=
+CODE_CHALLENGE=
+REDIRECT_URI=http://localhost:5000/auth/mal/callback
+CLIENT_BASE_URL=http://localhost:6969
