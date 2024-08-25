@@ -12,14 +12,12 @@ git submodule init
 git submodule update
 # install packages from main directory and services
 npm install
-npm run install deps
+npm run install-deps
 ```
 
 ### **Initialize Databases**
 
 #### [Install Postgres](https://www.w3schools.com/postgresql/postgresql_install.php)
-
-
 
 **Create Database Tables**
 
