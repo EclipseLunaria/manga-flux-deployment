@@ -24,7 +24,7 @@ read -p "Enter DB Pass (password): " AUTH_DB_PASS && AUTH_DB_PASS=${AUTH_DB_PASS
 read -p "Enter DB Name (manga_reader_auth): " AUTH_DB_NAME && AUTH_DB_NAME=${AUTH_DB_NAME:-"manga_reader"} && echo "AUTH_DB_NAME=$AUTH_DB_NAME"  >> .env
 echo "Generating Databases and roles"
 
-sudo -u postgres psql -c "CREATE DATABASE IF NOT EXISTS $CONTENT_DB_NAME;"
+sudo -u postgres psql -c "CREATE DATABASE $CONTENT_DB_NAME;"
 sudo -u postgres psql -c "CREATE USER $CONTENT_DB_USER WITH LOGIN;"
 sudo -u postgres psql -c "ALTER USER $CONTENT_DB_USER WITH PASSWORD '$CONTENT_DB_PASS';"
 sudo -u postgres psql -d $CONTENT_DB_NAME -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO $CONTENT_DB_USER;"
@@ -32,7 +32,7 @@ sudo -u postgres psql -d $CONTENT_DB_NAME -c 'CREATE EXTENSION IF NOT EXISTS "uu
 
 
 
-sudo -u postgres psql -c "CREATE DATABASE IF NOT EXISTS $AUTH_DB_NAME;"
+sudo -u postgres psql -c "CREATE DATABASE $AUTH_DB_NAME;"
 sudo -u postgres psql -c "CREATE USER $AUTH_DB_USER WITH LOGIN;"
 sudo -u postgres psql -c "ALTER USER $AUTH_DB_USER WITH PASSWORD '$AUTH_DB_PASS';"
 sudo -u postgres psql -d $AUTH_DB_NAME -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO $AUTH_DB_USER;"
