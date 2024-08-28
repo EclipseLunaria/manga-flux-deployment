@@ -1,9 +1,6 @@
-# initialize git submodules
-git submodule init
-git submodule update
-#install backend dependencies
-npm 'install'
-npm run 'install-deps'
+# run initialize script ensuring dependencies
+./initialize.sh
+
 
 # setup environment variables
 # Create databases
