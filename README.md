@@ -74,3 +74,23 @@ For each database:
 ```sql
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 ```
+
+
+## Production Deployment
+
+### Running Deployment Environment
+Run the following command from the project root directory
+```sh
+pm2 start ecosystem.config.js --env production
+```
+
+### Setting up Pm2 Startup Script
+Run the following command to setup the startup script
+```
+pm2 startup | grep sudo | bash
+```
+
+### Disabling Startup Process
+```
+pm2 unstartup
+```
