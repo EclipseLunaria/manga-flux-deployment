@@ -31,9 +31,19 @@ module.exports = {
       ignore_watch: ["node_modules"], // Ignore changes in node_modules
       env_production: {
         NODE_ENV: "production",
+        DB_HOST: process.env.CONTENT_DB_HOST,
+        DB_PORT: process.env.CONTENT_DB_PORT,
+        DB_USER: process.env.CONTENT_DB_USER,
+        DB_PASS: process.env.CONTENT_DB_PASS,
+        DB_NAME: process.env.CONTENT_DB_NAME,
       },
       env: {
         NODE_ENV: "development",
+        DB_HOST: process.env.CONTENT_DB_HOST,
+        DB_PORT: process.env.CONTENT_DB_PORT,
+        DB_USER: process.env.CONTENT_DB_USER,
+        DB_PASS: process.env.CONTENT_DB_PASS,
+        DB_NAME: process.env.CONTENT_DB_NAME,
       },
     },
     {
